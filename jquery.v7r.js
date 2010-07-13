@@ -25,7 +25,7 @@
 				return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(v);
 			},
 			equals: function (v, valueList, other) {
-				if (v == '') return true;
+				if (!$.v7r.rules.required(v)) return true;
 				return (v == valueList[other]);
 			},
 			requiredWith: function (v, valueList, other) {
