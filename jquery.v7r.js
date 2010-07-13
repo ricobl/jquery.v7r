@@ -21,7 +21,7 @@
 				return (v != '') && (v != null);
 			},
 			isEmail: function (v) {
-				if (v == '') return true;
+				if (!$.v7r.rules.required(v)) return true;
 				return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(v);
 			},
 			equals: function (v, valueList, other) {
